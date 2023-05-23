@@ -4,7 +4,7 @@
 
 This section answers the question, "how do I turn my notebook code into Python scripts?"
 
-To do so, we're going to turn the most useful code cells in [notebook 04. PyTorch Custom Datasets](https://www.learnpytorch.io/04_pytorch_custom_datasets/) into a series of Python scripts saved to a directory called [`going_modular`](https://github.com/mrdbourke/pytorch-deep-learning/tree/main/going_modular).
+To do so, we're going to turn the most useful code cells in [notebook 04. PyTorch Custom Datasets](https://colab.research.google.com/github/radiukpavlo/applied-math-packages/blob/main/01_notebooks/amp_04_pytorch_custom_datasets.ipynb?authuser=0) into a series of Python scripts saved to a directory called [`going_modular`](https://github.com/mrdbourke/pytorch-deep-learning/tree/main/going_modular).
 
 ## What is going modular?
 
