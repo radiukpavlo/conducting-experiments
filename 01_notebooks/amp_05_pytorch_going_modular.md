@@ -1,10 +1,10 @@
-[View Source Code](https://github.com/radiukpavlo/applied-math-packages/blob/main/01_notebooks/amp_05_pytorch_going_modular.md) | [View Slides](https://drive.google.com/file/d/12-71yRzEWzp-SkhfZjzXcNuCG4R61lad/view?usp=sharing) 
+[View Source Code](https://github.com/radiukpavlo/applied-math-packages/tree/main/going_modular) | [View Slides](https://drive.google.com/file/d/12-71yRzEWzp-SkhfZjzXcNuCG4R61lad/view?usp=sharing) 
 
 # 05. PyTorch Going Modular (Модулі в середовищі PyTorch)
 
 This section answers the question, "how do I turn my notebook code into Python scripts?"
 
-To do so, we're going to turn the most useful code cells in [notebook 04. PyTorch Custom Datasets](https://colab.research.google.com/github/radiukpavlo/applied-math-packages/blob/main/01_notebooks/amp_04_pytorch_custom_datasets.ipynb?authuser=0) into a series of Python scripts saved to a directory called [`going_modular`](https://github.com/radiukpavlo/applied-math-packages/tree/main/going_modular).
+To do so, we're going to turn the most useful code cells in notebook [04. PyTorch Custom Datasets](https://colab.research.google.com/github/radiukpavlo/applied-math-packages/blob/main/01_notebooks/amp_04_pytorch_custom_datasets.ipynb?authuser=0) into a series of Python scripts saved to a directory called [`going_modular`](https://github.com/radiukpavlo/applied-math-packages/tree/main/going_modular).
 
 ## What is going modular?
 
@@ -59,7 +59,7 @@ I usually start machine learning projects in Jupyter/Google Colab notebooks for 
 
 Then when I've got something working, I move the most useful pieces of code to Python scripts.
 
-<img src="https://raw.githubusercontent.com/mrdbourke/pytorch-deep-learning/main/images/05-my-workflow-for-experimenting.png" alt="one possible workflow for writing machine learning code, start with jupyter or google colab notebooks and then move to Python scripts when you've got something working." width=1000/>
+<img src="https://raw.githubusercontent.com/radiukpavlo/applied-math-packages/main/images/05-my-workflow-for-experimenting.png" alt="one possible workflow for writing machine learning code, start with jupyter or google colab notebooks and then move to Python scripts when you've got something working." width=1000/>
 
 *There are many possible workflows for writing machine learning code. Some prefer to start with scripts, others (like me) prefer to start with notebooks and go to scripts later on.*
 
@@ -73,7 +73,7 @@ For example, you might be instructed to run code like the following in a termina
 python train.py --model MODEL_NAME --batch_size BATCH_SIZE --lr LEARNING_RATE --num_epochs NUM_EPOCHS
 ```
 
-<img src="https://raw.githubusercontent.com/mrdbourke/pytorch-deep-learning/main/images/05-python-train-command-line-annotated.png" alt="command line call for training a PyTorch model with different hyperparameters" width=1000/> 
+<img src="https://raw.githubusercontent.com/radiukpavlo/applied-math-packages/main/images/05-python-train-command-line-annotated.png" alt="command line call for training a PyTorch model with different hyperparameters" width=1000/> 
 
 *Running a PyTorch `train.py` script on the command line with various hyperparameter settings.*
 
@@ -93,7 +93,7 @@ You could setup any number of these argument flags in your `train.py` script to 
 
 The PyTorch blog post for training state-of-the-art computer vision models uses this style.
 
-<img src="https://raw.githubusercontent.com/mrdbourke/pytorch-deep-learning/main/images/05-training-sota-recipe.png" alt="PyTorch training script recipe for training state of the art computer vision models" width=800/>
+<img src="https://raw.githubusercontent.com/radiukpavlo/applied-math-packages/main/images/05-training-sota-recipe.png" alt="PyTorch training script recipe for training state of the art computer vision models" width=800/>
 
 *PyTorch command line training script recipe for training state-of-the-art computer vision models with 8 GPUs. Source: [PyTorch blog](https://pytorch.org/blog/how-to-train-state-of-the-art-models-using-torchvision-latest-primitives/#the-training-recipe).*
 
@@ -105,8 +105,8 @@ Doing this will save us writing the same code over and over again.
 
 There are two notebooks for this section:
 
-1. [**05. Going Modular: Part 1 (cell mode)**](https://github.com/mrdbourke/pytorch-deep-learning/blob/main/going_modular/05_pytorch_going_modular_cell_mode.ipynb) - this notebook is run as a traditional Jupyter Notebook/Google Colab notebook and is a condensed version of [notebook 04](https://www.learnpytorch.io/04_pytorch_custom_datasets/).
-2. [**05. Going Modular: Part 2 (script mode)**](https://github.com/mrdbourke/pytorch-deep-learning/blob/main/going_modular/05_pytorch_going_modular_script_mode.ipynb) - this notebook is the same as number 1 but with added functionality to turn each of the major sections into Python scripts, such as, `data_setup.py` and `train.py`. 
+1. [**05. Going Modular: Part 1 (cell mode)**](https://colab.research.google.com/github/radiukpavlo/applied-math-packages/blob/main/going_modular/amp_05_pytorch_going_modular_cell_mode.ipynb) - this notebook is run as a traditional Jupyter Notebook/Google Colab notebook and is a condensed version of [notebook 04](https://colab.research.google.com/github/radiukpavlo/applied-math-packages/blob/main/01_notebooks/amp_04_pytorch_custom_datasets.ipynb#scrollTo=yR_rXqX40Zs0).
+2. [**05. Going Modular: Part 2 (script mode)**](https://colab.research.google.com/github/radiukpavlo/applied-math-packages/blob/main/going_modular/amp_05_pytorch_going_modular_script_mode.ipynb) - this notebook is the same as number 1 but with added functionality to turn each of the major sections into Python scripts, such as, `data_setup.py` and `train.py`. 
 
 The text in this document focuses on the code cells 05. Going Modular: Part 2 (script mode), the ones with `%%writefile ...` at the top.
 
@@ -116,7 +116,7 @@ Because sometimes the best way to learn something is to see how it *differs* fro
 
 If you run each notebook side-by-side you'll see how they differ and that's where the key learnings are.
 
-<img src="https://raw.githubusercontent.com/mrdbourke/pytorch-deep-learning/main/images/05-notebook-cell-mode-vs-script-mode.png" alt="running cell mode notebook vs a script mode notebook" width=1000/>
+<img src="https://raw.githubusercontent.com/radiukpavlo/applied-math-packages/main/images/05-notebook-cell-mode-vs-script-mode.png" alt="running cell mode notebook vs a script mode notebook" width=1000/>
 
 *Running the two notebooks for section 05 side-by-side. You'll notice that the **script mode notebook has extra code cells** to turn code from the cell mode notebook into Python scripts.*
 
@@ -166,25 +166,17 @@ import data_setup, engine, model_builder, utils
 from torchvision import transforms
 ```
 
-## Where can you get help?
-
-All of the materials for this course [are available on GitHub](https://github.com/mrdbourke/pytorch-deep-learning).
-
-If you run into trouble, you can ask a question on the course [GitHub Discussions page](https://github.com/mrdbourke/pytorch-deep-learning/discussions).
-
-And of course, there's the [PyTorch documentation](https://pytorch.org/docs/stable/index.html) and [PyTorch developer forums](https://discuss.pytorch.org/), a very helpful place for all things PyTorch. 
-
 ## 0. Cell mode vs. script mode
 
-A cell mode notebook such as [05. Going Modular Part 1 (cell mode)](https://github.com/mrdbourke/pytorch-deep-learning/blob/main/going_modular/05_pytorch_going_modular_cell_mode.ipynb) is a notebook run normally, each cell in the notebook is either code or markdown.
+A cell mode notebook such as [05. Going Modular Part 1 (cell mode)](https://colab.research.google.com/github/radiukpavlo/applied-math-packages/blob/main/going_modular/amp_05_pytorch_going_modular_cell_mode.ipynb) is a notebook run normally, each cell in the notebook is either code or markdown.
 
-A script mode notebook such as [05. Going Modular Part 2 (script mode)](https://github.com/mrdbourke/pytorch-deep-learning/blob/main/going_modular/05_pytorch_going_modular_script_mode.ipynb) is very similar to a cell mode notebook, however, many of the code cells may be turned into Python scripts.
+A script mode notebook such as [05. Going Modular Part 2 (script mode)](https://colab.research.google.com/github/radiukpavlo/applied-math-packages/blob/main/going_modular/amp_05_pytorch_going_modular_script_mode.ipynb) is very similar to a cell mode notebook, however, many of the code cells may be turned into Python scripts.
 
 > **Note:** You don't *need* to create Python scripts via a notebook, you can create them directly through an IDE (integrated developer environment) such as [VS Code](https://code.visualstudio.com/). Having the script mode notebook as part of this section is just to demonstrate one way of going from notebooks to Python scripts.
 
 ## 1. Get data
 
-Getting the data in each of the 05 notebooks happens the same as in [notebook 04](https://www.learnpytorch.io/04_pytorch_custom_datasets/#1-get-data).
+Getting the data in each of the 05 notebooks happens the same as in [notebook 04](https://colab.research.google.com/github/radiukpavlo/applied-math-packages/blob/main/01_notebooks/amp_04_pytorch_custom_datasets.ipynb#scrollTo=46e9TQmf0Zs4).
 
 A call is made to GitHub via Python's `requests` module to download a `.zip` file and unzip it.
 
@@ -207,7 +199,7 @@ else:
     
 # Download pizza, steak, sushi data
 with open(data_path / "pizza_steak_sushi.zip", "wb") as f:
-    request = requests.get("https://github.com/mrdbourke/pytorch-deep-learning/raw/main/data/pizza_steak_sushi.zip")
+    request = requests.get("https://github.com/radiukpavlo/applied-math-packages/blob/main/data/pizza_steak_sushi.zip")
     print("Downloading pizza, steak, sushi data...")
     f.write(request.content)
 
@@ -800,34 +792,6 @@ And if we wanted to, we could adjust our `train.py` file to use argument flag in
 ```
 python train.py --model MODEL_NAME --batch_size BATCH_SIZE --lr LEARNING_RATE --num_epochs NUM_EPOCHS
 ```
-
-## Exercises
-
-**Resources:**
-
-* [Exercise template notebook for 05](https://github.com/mrdbourke/pytorch-deep-learning/blob/main/extras/exercises/05_pytorch_going_modular_exercise_template.ipynb)
-* [Example solutions notebook for 05](https://github.com/mrdbourke/pytorch-deep-learning/blob/main/extras/solutions/05_pytorch_going_modular_exercise_solutions.ipynb)
-    * Live coding run through of [solutions notebook for 05 on YouTube](https://youtu.be/ijgFhMK3pp4)
-
-**Exercises:**
-
-1. Turn the code to get the data (from section 1. Get Data above) into a Python script, such as `get_data.py`.
-    * When you run the script using `python get_data.py` it should check if the data already exists and skip downloading if it does.
-    * If the data download is successful, you should be able to access the `pizza_steak_sushi` images from the `data` directory.
-2. Use [Python's `argparse` module](https://docs.python.org/3/library/argparse.html) to be able to send the `train.py` custom hyperparameter values for training procedures.
-    * Add an argument for using a different:
-        * Training/testing directory
-        * Learning rate
-        * Batch size
-        * Number of epochs to train for
-        * Number of hidden units in the TinyVGG model
-    * Keep the default values for each of the above arguments as what they already are (as in notebook 05).
-    * For example, you should be able to run something similar to the following line to train a TinyVGG model with a learning rate of 0.003 and a batch size of 64 for 20 epochs: `python train.py --learning_rate 0.003 --batch_size 64 --num_epochs 20`.
-    * **Note:** Since `train.py` leverages the other scripts we created in section 05, such as, `model_builder.py`, `utils.py` and `engine.py`, you'll have to make sure they're available to use too. You can find these in the [`going_modular` folder on the course GitHub](https://github.com/mrdbourke/pytorch-deep-learning/tree/main/going_modular/going_modular). 
-3. Create a script to predict (such as `predict.py`) on a target image given a file path with a saved model.
-    * For example, you should be able to run the command `python predict.py some_image.jpeg` and have a trained PyTorch model predict on the image and return its prediction.
-    * To see example prediction code, check out the [predicting on a custom image section in notebook 04](https://www.learnpytorch.io/04_pytorch_custom_datasets/#113-putting-custom-image-prediction-together-building-a-function). 
-    * You may also have to write code to load in a trained model.
 
 ## Extra-curriculum
 
