@@ -4,6 +4,7 @@ Contains PyTorch model code to instantiate a TinyVGG model.
 import torch
 from torch import nn 
 
+
 class TinyVGG(nn.Module):
     """Creates the TinyVGG architecture.
 

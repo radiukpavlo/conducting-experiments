@@ -4,6 +4,7 @@ Contains various utility functions for PyTorch model training and saving.
 import torch
 from pathlib import Path
 
+
 def save_model(model: torch.nn.Module,
                target_dir: str,
                model_name: str):
