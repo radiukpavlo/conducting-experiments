@@ -1,4 +1,4 @@
-# conducting-experiments-test
+# conducting-experiments
 
 Materials for the course "Conducting Experiments and Processing the Results of Scientific Research"
 
