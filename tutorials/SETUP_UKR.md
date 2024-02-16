@@ -76,4 +76,4 @@ print(torch.cuda.is_available())
 
 9. У Visual Studio Code інсталюйте Python Extension за [посиланням](https://marketplace.visualstudio.com/items?itemName=ms-python.python).
 
-10. Підключіть Visual Studio Code до віртуального середовища `conda`, відповідно до [туторіала](https://code.visualstudio.com/docs/python/environments)
+10. Підключіть Visual Studio Code до віртуального середовища `conda`, відповідно до [туторіала](https://code.visualstudio.com/docs/python/environments).
