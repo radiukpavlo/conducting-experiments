@@ -262,7 +262,7 @@ def download_data(source: str,
         pathlib.Path to downloaded data.
     
     Example usage:
-        download_data(source="https://github.com/radiukpavlo/conducting-experiments/blob/main/data/pizza_steak_sushi.zip",
+        download_data(source="https://github.com/radiukpavlo/conducting-experiments/raw/main/data/pizza_steak_sushi.zip",
                       destination="pizza_steak_sushi")
     """
     # Setup path to data folder
