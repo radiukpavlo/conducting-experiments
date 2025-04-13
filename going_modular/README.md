@@ -1,4 +1,4 @@
-# 05. PyTorch Going Modular
+# 06. PyTorch Going Modular
 
 The main goal of section [06. PyTorch Going Modular](https://github.com/radiukpavlo/conducting-experiments/blob/main/01_notebooks/ce_06_pytorch_going_modular.md) is to: **turn useful notebook code cells into reusable Python scripts (`.py` files)**.
 
